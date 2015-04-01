@@ -1,0 +1,10 @@
+//(control command t)
+//Change text in all selected layers to the same value.
+
+if ([selection count] > 0) {
+    var newText = [doc askForUserInput:"New text" initialValue:selection[0].name()]
+    var loop = [selection objectEnumerator]
+    while (layer = [loop nextObject]){
+        [layer setStringValue:newText]
+    }
+}
