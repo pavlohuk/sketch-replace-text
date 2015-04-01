@@ -1,5 +1,5 @@
 //(control command t)
-//Change text in all selected layers to the same value.
+//Change the text in all selected layers to the same value without changing styles.
 
 if ([selection count] > 0) {
     var newText = [doc askForUserInput:"New text" initialValue:selection[0].name()]
